@@ -7,36 +7,36 @@ A tiny collection of simple error handling decorators.
 Usage
 -----
 
+Ignoring exception
+
 ```python
 import nah
 
-# Ignore exception
 @nah.meh
 def check_age(age):
     if age < 18:
         raise UnderAgeException
 
 check_age(17)  # returns None
+```
+Returning a value
+```python
+import nah
 
-
-
-# returns a value
 @nah.gimme(0)
 def divide_by(n):
     return 100 / n
 
 divide_by(0) # returns 0 instead of raising ZeroDivisionError
-
-
-
-# retry
+```
+Retry
+```python
 @nah.again(3)
 def connect_db(config):
     return DbConnection.connect(config)
-
-
-
-# alternative function
+```
+Alternative function
+```python
 def alternative_func(a, b):
     return safe_divide(a, b)
 
