@@ -40,6 +40,10 @@ def connect_db(config):
 def alternative_func(a, b):
     return safe_divide(a, b)
 
+@nah.maybe(alternative_func)
+def my_func(a, b):
+    return a / b
+
 @nah.maybe(alternative_func, when=ZeroDivisionError)
 def my_func(a, b):
     return a / b
