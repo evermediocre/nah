@@ -1,5 +1,7 @@
-nah |latest-version|
+nah [![PyPI version](https://badge.fury.io/py/nah.svg)](https://badge.fury.io/py/nah)
 =====================
+[![Build Status](https://travis-ci.com/onchie/nah.svg?branch=master)](https://travis-ci.com/onchie/nah)
+
 A tiny collection of simple error handling decorators.
 
 Usage
@@ -38,7 +40,7 @@ def connect_db(config):
 def alternative_func(a, b):
     return safe_divide(a, b)
 
-@nah.meybe(alternative_func, when=ZeroDivisionError)
+@nah.maybe(alternative_func, when=ZeroDivisionError)
 def my_func(a, b):
     return a / b
 
