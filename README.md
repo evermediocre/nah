@@ -66,5 +66,5 @@ def my_func():
 Copyright
 ---------
 
-`nah` is an open source project by [`me`](https://github.com/onchie). _See the license_ file
+`nah` is an open source project by [`me`](https://github.com/evermediocre). _See the license_ file
 for more information.
